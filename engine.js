@@ -6,7 +6,7 @@ const buttonReset_div = document.getElementById("buttonReset");
 const rgbBling_div = document.getElementById("rgbBling");
 let x = 0;
 let y = 0;
-
+let rngColor;
 
 
 
@@ -43,6 +43,57 @@ function createDiv()
 
 }
 
+function coloring() 
+{
+    const squares = document.querySelectorAll("#main");
+    for(let i = 0; i < squares.length; i++)
+    {
+      squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: #765d69";
+      });
+    }
+}
+
+function rng()
+{
+   return Math.floor(Math.random() *5);
+}
+
+function colorRng(str)
+{
+    
+    switch(rng())
+    {
+        case 0:
+            rngColor = "#8fb9a8;";
+            break;
+        case 1:
+            rngColor = "#fefad4;";
+            break;
+        case 2:
+            rngColor = "#fcd0ba;";
+            break;
+        case 3:
+            rngColor = "#f1828d;";
+            break;
+        case 4:
+            rngColor = "#765d69;";
+            break;
+    }
+    return rngColor;
+
+}
+
+function coloringRGB() 
+{
+    const squares = document.querySelectorAll("#main");
+    for(let i = 0; i < squares.length; i++)
+    {
+      squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: " + colorRng();
+      });
+    }
+}
 
 buttonReset_div.addEventListener('click',function()
 {
@@ -53,15 +104,10 @@ buttonReset_div.addEventListener('click',function()
     coloring();
 })
 
-
-function coloring() 
+rgbBling_div.addEventListener('click',function()
 {
-    const squares = document.querySelectorAll("#main");
-    for(let i = 0; i < squares.length; i++)
-    {
-      squares[i].addEventListener("mouseover", function(e){
-        e.target.style.cssText = "background-color: orange";
-      });
-    }
-}
+    coloringRGB();
+})
+
+
 
