@@ -4,6 +4,7 @@ const rowNum = parseInt(htmlStyles.getPropertyValue("--rowNum"));
 const colNum = parseInt(htmlStyles.getPropertyValue("--colNum"));
 const buttonReset_div = document.getElementById("buttonReset");
 const rgbBling_div = document.getElementById("rgbBling");
+const depresso_div = document.getElementById("depresso");
 let x = 0;
 let y = 0;
 let rngColor;
@@ -65,19 +66,44 @@ function colorRng(str)
     switch(rng())
     {
         case 0:
-            rngColor = "#8fb9a8;";
+            rngColor = "#fe0000;";
             break;
         case 1:
-            rngColor = "#fefad4;";
+            rngColor = "#fdfe02;";
             break;
         case 2:
-            rngColor = "#fcd0ba;";
+            rngColor = "#0bff01;";
             break;
         case 3:
-            rngColor = "#f1828d;";
+            rngColor = "#011efe;";
             break;
         case 4:
-            rngColor = "#765d69;";
+            rngColor = "#fe00f6;";
+            break;
+    }
+    return rngColor;
+
+}
+
+function depressoRng(str)
+{
+    
+    switch(rng())
+    {
+        case 0:
+            rngColor = "#ffffff;";
+            break;
+        case 1:
+            rngColor = "#292929;";
+            break;
+        case 2:
+            rngColor = "#1a1a1a;";
+            break;
+        case 3:
+            rngColor = "#121212;";
+            break;
+        case 4:
+            rngColor = "#b62a25;";
             break;
     }
     return rngColor;
@@ -95,6 +121,17 @@ function coloringRGB()
     }
 }
 
+function depresso() 
+{
+    const squares = document.querySelectorAll("#main");
+    for(let i = 0; i < squares.length; i++)
+    {
+      squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: " + depressoRng();
+      });
+    }
+}
+
 buttonReset_div.addEventListener('click',function()
 {
     $( "div" ).remove(".divKek");
@@ -107,6 +144,11 @@ buttonReset_div.addEventListener('click',function()
 rgbBling_div.addEventListener('click',function()
 {
     coloringRGB();
+})
+
+depresso_div.addEventListener('click',function()
+{
+    depresso();
 })
 
 

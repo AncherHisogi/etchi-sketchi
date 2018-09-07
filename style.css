@@ -25,11 +25,12 @@
 }
 body
 {
-    background-color:#765d69;
+    background-image: url("22.jpg");
+    background-size: cover;
 }
 #container
 {
-    top:-50px;
+    top:-150px;
     margin:auto;
     position: relative;
     height: 500px;
@@ -93,6 +94,30 @@ body
 }
 
 #rgbBling:hover
+{
+    border-radius: 30px;
+}
+
+#depresso
+{
+    background-color:  #f1828d;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 20px;
+    color: #FEFAD4;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 300px;
+    right: 400px;
+    margin:auto;
+    box-shadow: 0px 0px 5px black;
+}
+
+#depresso:hover
 {
     border-radius: 30px;
 }
