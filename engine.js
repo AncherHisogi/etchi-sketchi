@@ -5,6 +5,8 @@ const colNum = parseInt(htmlStyles.getPropertyValue("--colNum"));
 const buttonReset_div = document.getElementById("buttonReset");
 const rgbBling_div = document.getElementById("rgbBling");
 const depresso_div = document.getElementById("depresso");
+const glorios_div = document.getElementById("glorious");
+const lit_div = document.getElementById("lit");
 let x = 0;
 let y = 0;
 let rngColor;
@@ -110,6 +112,56 @@ function depressoRng(str)
 
 }
 
+function gloriousRng(str)
+{
+    
+    switch(rng())
+    {
+        case 0:
+            rngColor = "#FFC0CB;";
+            break;
+        case 1:
+            rngColor = "#FFB6C1;";
+            break;
+        case 2:
+            rngColor = "#FF69B4;";
+            break;
+        case 3:
+            rngColor = "#FF1493;";
+            break;
+        case 4:
+            rngColor = "#C71585;";
+            break;
+    }
+    return rngColor;
+
+}
+
+function litRng(str)
+{
+    
+    switch(rng())
+    {
+        case 0:
+            rngColor = "#ec0000;";
+            break;
+        case 1:
+            rngColor = "#ec2400;";
+            break;
+        case 2:
+            rngColor = "#ec5300;";
+            break;
+        case 3:
+            rngColor = "#ec5300;";
+            break;
+        case 4:
+            rngColor = "#ecca00;";
+            break;
+    }
+    return rngColor;
+
+}
+
 function coloringRGB() 
 {
     const squares = document.querySelectorAll("#main");
@@ -128,6 +180,26 @@ function depresso()
     {
       squares[i].addEventListener("mouseover", function(e){
         e.target.style.cssText = "background-color: " + depressoRng();
+      });
+    }
+}
+function glorious() 
+{
+    const squares = document.querySelectorAll("#main");
+    for(let i = 0; i < squares.length; i++)
+    {
+      squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: " + gloriousRng();
+      });
+    }
+}
+function lit() 
+{
+    const squares = document.querySelectorAll("#main");
+    for(let i = 0; i < squares.length; i++)
+    {
+      squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: " + litRng();
       });
     }
 }
@@ -150,6 +222,16 @@ depresso_div.addEventListener('click',function()
 {
     depresso();
 })
+glorios_div.addEventListener('click',function()
+{
+    glorious();
+})
+
+lit_div.addEventListener('click',function()
+{
+    lit();
+})
+
 
 
 

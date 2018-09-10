@@ -4,6 +4,10 @@
     --colNum: 0;
    /* --gridHeight: 120px;*/
   }
+::-webkit-scrollbar 
+{ 
+    display: none; 
+}
 
 #header
 {   
@@ -30,7 +34,7 @@ body
 }
 #container
 {
-    top:-150px;
+    top:50px;
     margin:auto;
     position: relative;
     height: 500px;
@@ -38,7 +42,6 @@ body
     background-color: #fcd0ba;
     padding: 40px;
     box-shadow: 0px 0px 5px black;
-    
 }
 #main
 {
@@ -65,17 +68,26 @@ body
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    top: 200px;
-    right: 400px;
-    margin:auto;
     box-shadow: 0px 0px 5px black;
 }
 #buttonReset:hover
 {
     border-radius: 30px;
 }
+#buttonContainer
+{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+    height: 50%;
+    top: -500px;
+    margin:auto;
+    right: 350px;
+}
 #rgbBling
 {
+    top:10px;
     background-color:  #f1828d;
     width: 150px;
     height: 50px;
@@ -87,9 +99,6 @@ body
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    top: 250px;
-    right: 400px;
-    margin:auto;
     box-shadow: 0px 0px 5px black;
 }
 
@@ -100,6 +109,7 @@ body
 
 #depresso
 {
+    top:20px;
     background-color:  #f1828d;
     width: 150px;
     height: 50px;
@@ -111,13 +121,51 @@ body
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    top: 300px;
-    right: 400px;
-    margin:auto;
+    box-shadow: 0px 0px 5px black;
+}
+#glorious
+{   
+    top:30px;
+    background-color:  #f1828d;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 20px;
+    color: #FEFAD4;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
     box-shadow: 0px 0px 5px black;
 }
 
 #depresso:hover
+{
+    border-radius: 30px;
+}
+#lit
+{   
+    top:40px;
+    background-color:  #f1828d;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 20px;
+    color: #FEFAD4;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0px 0px 5px black;
+}
+
+#lit:hover
+{
+    border-radius: 30px;
+}
+#glorious:hover
 {
     border-radius: 30px;
 }
