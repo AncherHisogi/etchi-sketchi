@@ -27,10 +27,8 @@ function input()
         alert("NUBAH TOO BIG");
         y = 0;
     }
-    
     y = y * y;
     return y;
-    
 }
 
 
@@ -43,7 +41,6 @@ function createDiv()
 
         document.getElementById("main").appendChild(divNew);
     }
-
 }
 
 function coloring() 
@@ -51,9 +48,8 @@ function coloring()
     const squares = document.querySelectorAll("#main");
     for(let i = 0; i < squares.length; i++)
     {
-      squares[i].addEventListener("mouseover", function(e){
-        e.target.style.cssText = "background-color: #765d69";
-      });
+        squares[i].addEventListener("mouseover", function(e){
+        e.target.style.cssText = "background-color: #765d69";});
     }
 }
 
@@ -134,7 +130,6 @@ function gloriousRng(str)
             break;
     }
     return rngColor;
-
 }
 
 function litRng(str)
@@ -159,7 +154,6 @@ function litRng(str)
             break;
     }
     return rngColor;
-
 }
 
 function coloringRGB() 
